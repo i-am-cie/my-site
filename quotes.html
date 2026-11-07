@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes — WebTech Lab</title>
+  <meta name="description" content="Eighteen quotes about code, simplicity and learning — with a random one in the header on every visit.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WebTech Lab">
+  <meta property="og:title" content="Quotes — WebTech Lab">
+  <meta property="og:description" content="Eighteen quotes about code, simplicity and learning — with a random one in the header.">
+  <meta property="og:url" content="https://i-am-cie.github.io/my-site/quotes.html">
+  <meta property="og:image" content="https://i-am-cie.github.io/my-site/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>WebTech Lab</a>
+      <div id="site-nav"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="quote-hero" aria-labelledby="random-quote-heading">
+      <div class="container">
+        <h1 id="random-quote-heading" class="eyebrow" style="color:#8fb6ea">A random quote</h1>
+        <figure>
+          <blockquote data-random-quote>Simplicity is prerequisite for reliability.</blockquote>
+          <cite data-random-author>Edsger W. Dijkstra</cite>
+        </figure>
+        <button class="btn" type="button" data-random-next>Another quote</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Eighteen quotes I keep coming back to</h2>
+          <p class="lead">Most of them are about the same thing: keeping things small, clear and readable. Click the button above for a random one.</p>
+        </div>
+
+        <ul class="quote-grid">
+          <li class="quote">
+            <p>Simplicity is prerequisite for reliability.</p>
+            <cite>Edsger W. Dijkstra</cite>
+          </li>
+          <li class="quote">
+            <p>Premature optimization is the root of all evil.</p>
+            <cite>Donald Knuth</cite>
+          </li>
+          <li class="quote">
+            <p>The best way to predict the future is to invent it.</p>
+            <cite>Alan Kay</cite>
+          </li>
+          <li class="quote">
+            <p>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p>
+            <cite>Martin Fowler</cite>
+          </li>
+          <li class="quote">
+            <p>The most dangerous phrase in the language is “we’ve always done it this way”.</p>
+            <cite>Grace Hopper</cite>
+          </li>
+          <li class="quote">
+            <p>Talk is cheap. Show me the code.</p>
+            <cite>Linus Torvalds</cite>
+          </li>
+          <li class="quote">
+            <p>Design is not just what it looks like and feels like. Design is how it works.</p>
+            <cite>Steve Jobs</cite>
+          </li>
+          <li class="quote">
+            <p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.</p>
+            <cite>Antoine de Saint-Exupéry</cite>
+          </li>
+          <li class="quote">
+            <p>First, solve the problem. Then, write the code.</p>
+            <cite>John Johnson</cite>
+          </li>
+          <li class="quote">
+            <p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
+            <cite>Harold Abelson</cite>
+          </li>
+          <li class="quote">
+            <p>Make it work, make it right, make it fast.</p>
+            <cite>Kent Beck</cite>
+          </li>
+          <li class="quote">
+            <p>The only way to learn a new programming language is by writing programs in it.</p>
+            <cite>Dennis Ritchie</cite>
+          </li>
+          <li class="quote">
+            <p>Controlling complexity is the essence of computer programming.</p>
+            <cite>Brian Kernighan</cite>
+          </li>
+          <li class="quote">
+            <p>Code is like humour. When you have to explain it, it is bad.</p>
+            <cite>Cory House</cite>
+          </li>
+          <li class="quote">
+            <p>If you can’t explain it simply, you don’t understand it well enough.</p>
+            <cite>Albert Einstein (attributed)</cite>
+          </li>
+          <li class="quote">
+            <p>Weeks of coding can save you hours of planning.</p>
+            <cite>Anonymous</cite>
+          </li>
+          <li class="quote">
+            <p>It is not a bug, it is an undocumented feature.</p>
+            <cite>Anonymous</cite>
+          </li>
+          <li class="quote">
+            <p>Stay hungry, stay foolish.</p>
+            <cite>Steve Jobs</cite>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>WebTech Lab · learning website for the Web Technologies course</span>
+      <span>Built by hand with HTML, CSS and a little JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    /* Random quote in the header: pick one of the eighteen quotes on the page.
+       The quotes are read from the list, so this page has a single source. */
+    (function () {
+      'use strict';
+      var quotes = Array.prototype.map.call(
+        document.querySelectorAll('.quote'),
+        function (item) {
+          return {
+            text: item.querySelector('p').textContent.trim(),
+            author: item.querySelector('cite').textContent.trim()
+          };
+        }
+      );
+      var textEl = document.querySelector('[data-random-quote]');
+      var authorEl = document.querySelector('[data-random-author]');
+      var button = document.querySelector('[data-random-next]');
+      var last = -1;
+
+      var show = function () {
+        if (!quotes.length || !textEl || !authorEl) {
+          return;
+        }
+        var index = Math.floor(Math.random() * quotes.length);
+        if (quotes.length > 1 && index === last) {
+          index = (index + 1) % quotes.length;
+        }
+        last = index;
+        textEl.textContent = quotes[index].text;
+        authorEl.textContent = quotes[index].author;
+      };
+
+      show();
+      if (button) {
+        button.addEventListener('click', show);
+      }
+    })();
+  </script>
+</body>
+</html>

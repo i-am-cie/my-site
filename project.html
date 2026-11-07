@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project ideas — WebTech Lab</title>
+  <meta name="description" content="Six web project ideas I could build next, with what each one teaches and how hard it is.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WebTech Lab">
+  <meta property="og:title" content="Project ideas — WebTech Lab">
+  <meta property="og:description" content="Six web project ideas I could build next, with what each one teaches and how hard it is.">
+  <meta property="og:url" content="https://i-am-cie.github.io/my-site/project.html">
+  <meta property="og:image" content="https://i-am-cie.github.io/my-site/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>WebTech Lab</a>
+      <div id="site-nav"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1 class="section-title">Project ideas</h1>
+          <p class="lead">Six things I could build next with what this course taught me. Each one is small enough to finish, and each one teaches something the others do not.</p>
+        </div>
+
+        <ol class="idea-list">
+          <li class="idea">
+            <h3>1 · Personal dashboard</h3>
+            <p>A start page that opens with the links I use every day: a clock, the weather for my city and a list of shortcuts. The interesting part is the layout — a grid that still looks right on a phone.</p>
+            <div class="idea-meta">
+              <span class="badge">HTML and CSS grid</span>
+              <span class="badge warm">fetch a JSON API</span>
+              <span class="badge">Difficulty: medium</span>
+            </div>
+          </li>
+          <li class="idea">
+            <h3>2 · Recipe box</h3>
+            <p>Add recipes, tag them (breakfast, quick, vegetarian), filter the list and let the browser remember them after a reload. A gentle introduction to storing data on the client.</p>
+            <div class="idea-meta">
+              <span class="badge">DOM and events</span>
+              <span class="badge warm">localStorage</span>
+              <span class="badge">Difficulty: easy</span>
+            </div>
+          </li>
+          <li class="idea">
+            <h3>3 · Study timer</h3>
+            <p>A 25-minute focus timer with breaks, a progress ring that fills up and a sound when time is over. Small, but it needs accurate timing and a lot of care around edge cases.</p>
+            <div class="idea-meta">
+              <span class="badge">setInterval</span>
+              <span class="badge warm">SVG ring</span>
+              <span class="badge">Difficulty: easy</span>
+            </div>
+          </li>
+          <li class="idea">
+            <h3>4 · Quiz game</h3>
+            <p>Ten multiple-choice questions, one at a time, with a score and a review of the wrong answers at the end. Good practice in keeping state in one object and rendering from it.</p>
+            <div class="idea-meta">
+              <span class="badge">State handling</span>
+              <span class="badge warm">conditional styling</span>
+              <span class="badge">Difficulty: medium</span>
+            </div>
+          </li>
+          <li class="idea">
+            <h3>5 · Pixel art editor</h3>
+            <p>A 16 × 16 grid where clicking a cell paints it, with a colour picker, an eraser and a button that exports the drawing as a PNG. The hardest of the six, and the most fun.</p>
+            <div class="idea-meta">
+              <span class="badge">canvas</span>
+              <span class="badge warm">pointer events</span>
+              <span class="badge">Difficulty: hard</span>
+            </div>
+          </li>
+          <li class="idea">
+            <h3>6 · Weather card</h3>
+            <p>One card, one city: current temperature, a small forecast and an icon that changes with the weather. Mostly about handling a request that can fail, slowly or badly.</p>
+            <div class="idea-meta">
+              <span class="badge">async fetch</span>
+              <span class="badge warm">error states</span>
+              <span class="badge">Difficulty: medium</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>WebTech Lab · learning website for the Web Technologies course</span>
+      <span>Built by hand with HTML, CSS and a little JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
