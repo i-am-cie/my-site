@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebTech Lab — learning web technologies</title>
+  <meta name="description" content="The learning website I built during the Web Technologies course: HTML structure, external CSS, a shared navigation and a little JavaScript.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WebTech Lab">
+  <meta property="og:title" content="WebTech Lab — learning web technologies">
+  <meta property="og:description" content="The learning website I built during the Web Technologies course.">
+  <meta property="og:url" content="https://i-am-cie.github.io/my-site/">
+  <meta property="og:image" content="https://i-am-cie.github.io/my-site/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>WebTech Lab</a>
+      <div id="site-nav"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="img/hero.jpg" alt="">
+      </div>
+      <div class="container hero-body">
+        <p class="eyebrow">Web Technologies · semester project</p>
+        <h1>Learning web technologies, one week at a time</h1>
+        <p>This is the practice site I built during the course. It started as a single <code>index.html</code> and grew week by week: structure and semantics first, then external CSS, links and paths, images, a navigation that is written once and injected by JavaScript, and finally a couple of small interactions.</p>
+        <div class="hero-actions">
+          <a class="btn" href="quotes.html">Read the quotes</a>
+          <a class="btn btn-ghost" href="project.html">See my project ideas</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">What is inside</h2>
+          <p class="lead">Four pages, one stylesheet, one shared navigation. Every page is reachable from the menu at the top.</p>
+        </div>
+        <div class="card-grid">
+          <a class="card" href="quotes.html">
+            <p class="card-index">quotes.html</p>
+            <h3>Quotes about code</h3>
+            <p>Eighteen sentences about simplicity, naming and learning, with a random quote in the header every time you open the page.</p>
+          </a>
+          <a class="card" href="project.html">
+            <p class="card-index">project.html</p>
+            <h3>Six project ideas</h3>
+            <p>Ideas I could build next, each with what it teaches and how hard it is — from a personal dashboard to a pixel art editor.</p>
+          </a>
+          <a class="card" href="machine.html">
+            <p class="card-index">machine.html</p>
+            <h3>A useless machine</h3>
+            <p>A switch with one purpose: something reaches out and turns it off again. Below it, a small game.</p>
+          </a>
+          <a class="card" href="machine.html">
+            <p class="card-index">nav.html + nav.js</p>
+            <h3>One navigation, four pages</h3>
+            <p>The menu exists once, as an HTML fragment. <code>nav.js</code> fetches it and marks the current page.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">What I practised</h2>
+          <p class="lead">The site follows the lessons in order. Every week added a page, a rule or an asset.</p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Semantic structure</h3>
+            <p>Header, nav, main, section, figure and footer instead of a pile of generic boxes. Headings in order, one <code>h1</code> per page.</p>
+          </div>
+          <div class="card">
+            <h3>External CSS</h3>
+            <p>One stylesheet for the whole site, with custom properties, a shared container and a mobile breakpoint at 780 px.</p>
+          </div>
+          <div class="card">
+            <h3>Links and paths</h3>
+            <p>Relative paths between pages and into <code>img/</code>, so the same files work locally and on GitHub Pages.</p>
+          </div>
+          <div class="card">
+            <h3>Images</h3>
+            <p>A real hero image with empty alt as decoration, and every content image with meaningful alt text.</p>
+          </div>
+          <div class="card">
+            <h3>JavaScript and the DOM</h3>
+            <p>A shared navigation, a random quote, a toy and a game — all plain DOM code, no libraries.</p>
+          </div>
+          <div class="card">
+            <h3>Git and GitHub Pages</h3>
+            <p>Work committed step by step in a local repository, pushed to a public GitHub repository and published from the main branch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>WebTech Lab · learning website for the Web Technologies course</span>
+      <span>Built by hand with HTML, CSS and a little JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
