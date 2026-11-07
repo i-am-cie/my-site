@@ -230,8 +230,13 @@ pre {
 .hero-body {
   position: relative;
   z-index: 2;
-  padding: 84px 0 76px;
-  max-width: 640px;
+  padding-top: 84px;
+  padding-bottom: 76px;
+}
+
+/* the text block keeps a readable measure but stays on the page grid */
+.hero-inner {
+  max-width: 620px;
 }
 
 .eyebrow {
@@ -667,7 +672,8 @@ pre {
   }
 
   .hero-body {
-    padding: 56px 0 52px;
+    padding-top: 48px;
+    padding-bottom: 44px;
   }
 
   .hero h1 {
