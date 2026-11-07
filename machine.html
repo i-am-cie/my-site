@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine — WebTech Lab</title>
+  <meta name="description" content="A useless machine that switches itself off, and a small game: hit the moving target as often as you can in twenty seconds.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WebTech Lab">
+  <meta property="og:title" content="Machine — WebTech Lab">
+  <meta property="og:description" content="A useless machine that switches itself off, and a small game.">
+  <meta property="og:url" content="https://i-am-cie.github.io/my-site/machine.html">
+  <meta property="og:image" content="https://i-am-cie.github.io/my-site/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>WebTech Lab</a>
+      <div id="site-nav"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1 class="section-title">The useless machine</h1>
+          <p class="lead">A machine whose only job is to undo what you just did. Turn the switch on and something reaches out and turns it off again.</p>
+        </div>
+
+        <div class="machine-panel">
+          <div class="machine-stage">
+            <button class="switch" type="button" role="switch" aria-checked="false" aria-label="The switch the machine keeps turning off" data-switch>
+              <span class="switch-knob"></span>
+            </button>
+            <div class="arm" aria-hidden="true" data-arm></div>
+          </div>
+          <p class="machine-caption">The machine has switched itself off <span class="attempts" data-attempts>0</span> time(s).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">And a small game</h2>
+          <p class="lead">Twenty seconds, one target, as many hits as you can manage. The best score stays in this browser.</p>
+        </div>
+
+        <div class="machine-panel">
+          <div class="game-hud" aria-live="polite">
+            <span>Score <strong data-score>0</strong></span>
+            <span>Time left <strong data-time>20.0</strong>s</span>
+            <span>Best <strong data-best>0</strong></span>
+          </div>
+
+          <div class="game-board" data-game>
+            <button class="target" type="button" aria-label="Hit the target" data-target></button>
+            <div class="game-message" data-message>
+              <div>
+                <h3 data-message-title>Ready when you are</h3>
+                <p>Click the blue circle as often as you can before the time runs out.</p>
+                <p><button class="btn" type="button" data-start>Start game</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>WebTech Lab · learning website for the Web Technologies course</span>
+      <span>Built by hand with HTML, CSS and a little JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script src="machine.js"></script>
+</body>
+</html>
