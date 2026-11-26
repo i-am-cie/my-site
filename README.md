@@ -36,6 +36,8 @@ my-site/
 ├── nav.html          the navigation fragment, written once
 ├── nav.js            injects nav.html into every page
 ├── machine.js        the useless machine and the game
+├── tools/
+│   └── check-site.mjs zero-dependency static checks (Node 22)
 ├── style.css         one stylesheet for the whole site
 ├── favicon.svg
 ├── favicon-32.png
@@ -51,4 +53,19 @@ my-site/
 - One external stylesheet, custom properties, a breakpoint at 780 px
 - Plain JavaScript: `fetch`, DOM injection, a timer, `localStorage`
 - No framework, no build step
+- Zero-dependency static checks in `tools/check-site.mjs` (Node 22, no install step)
 - Published with GitHub Pages from the `main` branch
+
+## Checks
+
+`tools/check-site.mjs` verifies that every local link and asset resolves, every
+image has an `alt`, external new-tab links carry `rel="noopener"`, each page has
+the required Open Graph metadata, element ids are unique and each page has a
+single `h1`. Run it locally:
+
+```
+node tools/check-site.mjs
+```
+
+GitHub Actions runs the same check on every push and pull request to `main`
+(see `.github/workflows/ci.yml`). Warnings do not fail the build; errors do.

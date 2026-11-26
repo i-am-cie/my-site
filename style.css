@@ -357,6 +357,10 @@ pre {
   margin-bottom: 18px;
 }
 
+.quote-hero .eyebrow {
+  color: #8fb6ea;
+}
+
 .quote-hero cite {
   display: block;
   font-style: normal;
@@ -454,7 +458,8 @@ pre {
   border: 1px solid #cadeff;
 }
 
-.badge-warm {
+.badge-warm,
+.badge.warm {
   background: #fff3e2;
   color: #8a5200;
   border-color: #ffdda8;
